@@ -1,9 +1,17 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.releaseapp.myapp',
   appName: 'myApp',
-  webDir: 'www'
+  webDir: 'www',
+  plugins: {
+    LiveUpdates: {
+      appId: 'be2141cd',
+      channel: 'Production',
+      autoUpdateMethod: 'background',
+      maxVersions: 2
+    }
+  }
 };
 
 export default config;
